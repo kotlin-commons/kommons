@@ -1,4 +1,4 @@
-package opendev.kommons
+package org.github.opendev.kommons
 
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -15,7 +15,7 @@ val mapper = run {
     mapper
 }
 
-fun openConfigFile(fileName: String): InputStream? {
+fun openConfigFile(fileName: String): InputStream {
     if (File(fileName).exists()) {
         return File(fileName).inputStream()
     }
